@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link href="http://fonts.googleapis.com/css?family=Signika" rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" href="assets/images/nhmc_icon.png"/>
+
+
+		<title>I.S.L.E Association</title>
+		<!-- INCLUDE REQUIRED THIRD PARTY LIBRARY JAVASCRIPT AND CSS -->
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<meta name="viewport" content="width=device-width" />
+		<!-- define the base url -->
+		<!-- 	<base href="/Users/higher2fly/Agro-Know/projects_UX/gfsp/"> -->
+		<!-- 	<base href="greenlearningnetwork.com/gfsp/"> -->
+		<!-- get base url dynamically to avoid collisions between 'www.domain...' and 'domain...' -->
+		<script>
+	      document.write('<base href="' + document.location + '" />');
+		</script>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet/less" type="text/css" href="css/style.less" />
+		<link rel="stylesheet/less" type="text/css" href="lib/angular-socialshare/socialbuttons.css" />
+
+
+</head>
+
+<body ng-app="akListing" ng-cloak>
+		<div id="wrap" ng-controller="mainController" ng-init="init_language()" >
+			<header ></header>
+
+			<div id="akListing">
+				<ul>
+	                <div id="navmenu" class="col-xs-12 col-sm-12 col-md-12 text-center">
+	                    <button type="button" class="btn btn-primary"><a href="#"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Return Home</a></button>
+	                    <button type="button" class="btn btn-danger"><a href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;I.S.L.E Association</a></button>
+	                    <button type="button" class="btn btn-success"><a href="http://spg.latramis.com/welcome" title="Portal Generator"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own portal</a></button>
+	                </div>
+ 				</ul>
+		    	<div ng-view></div>
+			</div>
+
+			<div id="logoSlider" class="col-xs-12 col-sm-12 col-md-12 text-center">
+				<p>	Categories <br /><br />
+					
+					
+					
+					
+					<table style="width:100%">
+					  <tr>
+					    <th><a href="#/educational/search/?q=*&learningResourceTypes=course" title="Courses"><img class="grayscale" src="assets/images/course.png" alt="Course" style="width:101px;height:103px;"></a></th>
+					    <th><a href="#/educational/search/?q=*&learningResourceTypes=enquiry-oriented activity" title="Enquiry-oriented activity"><img class="grayscale" src="assets/images/board.png" alt="Board" style="width:101px;height:103px;"></a></th>
+					    <th><a href="#/educational/search/?q=*&learningResourceTypes=exploration" title="Exploration"><img class="grayscale" src="assets/images/tree.png" alt="Tree" style="width:101px;height:103px;"></a></th>
+					    <th><a href="#/educational/search/?q=*&learningResourceTypes=case study" title="Case Studies"><img class="grayscale" src="assets/images/suitcase.png" alt="Suitcase" style="width:101px;height:103px ;"></a></th>
+					  </tr>
+					  <tr>
+					    <td>Courses</td>
+					    <td>Activities</td>
+					    <td>Exploration</td>
+					    <td>Case Studies</td>
+					  </tr>
+					</table>
+				</p>
+			</div>
+		</div>
+
+		<!--<footer  class="col-xs-12 col-sm-12 col-md-12">
+			sometext
+		</footer>-->
+		</div>
+		<div id="address_footer"><p class="aligncenter">&nbsp;</p></div>
+
+	<!-- ----------- -->
+	<!-- angular -->
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/ui-bootstrap-0.10.0.min.js"></script>
+	<script type="text/javascript" src="lib/angular-socialshare/angular-socialshare.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+	<!-- less -->
+	<script src="lib/less-1.5.0.min.js" type="text/javascript"></script>
+
+	<!-- app & controllers -->
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/controllers/mainController.js"></script>
+	<script type="text/javascript" src="app/controllers/search/listingController.js"></script>
+	<script type="text/javascript" src="app/controllers/search/paginationController.js"></script>
+	<script type="text/javascript" src="app/controllers/search/facetsController.js"></script>
+	<script type="text/javascript" src="app/controllers/view_item/viewItemController.js"></script>
+
+	<!-- JIRA BUGS REPORTING -->
+    <!-- <script type="text/javascript" src="https://agroknow.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e/en_US-95vtla/6322/8/1.4.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=7bdc0edb"></script> -->
+
+
+<script type="text/javascript">
+// Tiny object for getting counts
+var socialGetter = (function() {
+	/* just a utility to do the script injection */
+	function injectScript(url) {
+		var script = document.createElement('script');
+		script.async = true;
+		script.src = url;
+		document.head.appendChild(script);
+	}
+
+	return {
+		getTwitterCount: function(url, callbackName) {
+			injectScript('http://urls.api.twitter.com/1/urls/count.json?url=' + url.replace(/#/g,'%23') + '&callback=' + callbackName);
+		}
+	};
+})();
+// Callbacks to do something with the result
+function twitterCallback(result) {
+	jQuery('#twitterCount').text(result.count);
+}
+function tweetPopup(el) {
+	var via = '';
+    var height = ((window.outerHeight) /2) - 150;
+    var width = ((window.outerWidth)/2)  - 250;
+    if(jQuery(el).attr('data-via')) {
+    	via = '&via=' + jQuery(el).attr('data-via');
+    }
+    window.open('http://twitter.com/intent/tweet?text='+jQuery(el).attr('data-text')+'&url='+jQuery(el).attr('data-url').replace(/#/,'%23') + via, 'twitter', 'height=300,width=500,resizable=1,scrollbars=yes,top='+ height +',left='+width);
+    return false;
+}
+</script>
+</body>
+
+</html>
