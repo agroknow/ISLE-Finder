@@ -40,7 +40,7 @@
     "mt": "Μαλτεζικα",
     "fi": "Finnish",
     "it": "Ιταλικα",
-    "no": "Norvegian",
+    "no": "Norwegian",
     "fr": "French",
     "ro": "Ρουμανικα",
     "cs": "Τσεχικα",
@@ -374,7 +374,7 @@
     "Experiment": "Πείραμα",
     "exploration": "Exploration",
     "Glossary": "Γλωσσαριο",
-    "guide(advice sheets)": "Οδηγος (φυλλο πληροφοριων)",
+    "guide(advice sheets)": "Guide (information sheets)",
     "lesson plan": "Lesson Plan",
     "open activity": "Open Activity",
     "presentation": "Presentation",
@@ -470,5 +470,6 @@
     "inc" : "Indic languages",
     "cy" : "Welsh",
     "zh" : "Chinese",
-    "aglrfaocdx" : "Fao Capacity Portal"
+    "aglrfaocdx" : "Fao Capacity Portal",
+    "Course" : "Test123"
 }
