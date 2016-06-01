@@ -32,14 +32,29 @@
 
 <body ng-app="akListing" ng-cloak>
 		<div id="wrap" ng-controller="mainController" ng-init="init_language()" >
-			<header ></header>
+			<header >
+				<!-- Language     -->
+				 <div class="languages_block">
+					 <a href="javascript:;" ng-click="change_language('fr')"><img src="assets/images/flag_gr_round.png" ></a>
+					 <a href="javascript:;" ng-click="change_language('en')"><img src="assets/images/flag_en_round.png" ></a>
+				 </div>
+				<!-- / Language -->
+			</header>
 
 			<div id="akListing">
 				<ul>
 	                <div id="navmenu" class="col-xs-12 col-sm-12 col-md-12 text-center">
+	                <div ng-if="selectedLanguage=='en'">
 	                    <a class="btn btn-primary" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Return Home</a>
-	                    <a class="btn btn-danger" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;I.S.L.E Association</a>
+	                    <a class="btn btn-danger" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
 	                    <a class="btn btn-success" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own portal</a>
+	                </div>
+
+	                <div ng-if="selectedLanguage=='fr'">
+	                    <a class="btn btn-primary" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Home Retour</a>
+	                    <a class="btn btn-danger" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
+	                    <a class="btn btn-success" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Demandez votre portail personnel</a>
+	                </div>
 	                </div>
  				</ul>
 		    	<div ng-view></div>
@@ -57,12 +72,18 @@
 					    <th><a href="#/educational/search/?q=*&learningResourceTypes=enquiry-oriented activity" title="Enquiry-oriented activity"><img class="grayscale" src="assets/images/board.png" alt="Board" style="width:101px;height:103px;"></a></th>
 					    <th><a href="#/educational/search/?q=*&learningResourceTypes=exploration" title="Exploration"><img class="grayscale" src="assets/images/tree.png" alt="Tree" style="width:101px;height:103px;"></a></th>
 					    <th><a href="#/educational/search/?q=*&learningResourceTypes=case study" title="Case Studies"><img class="grayscale" src="assets/images/suitcase.png" alt="Suitcase" style="width:101px;height:103px ;"></a></th>
-					  </tr>
-					  <tr>
+					  </tr>					  
+					  <tr ng-if="selectedLanguage=='en'">
 					    <td>Courses</td>
 					    <td>Activities</td>
 					    <td>Exploration</td>
 					    <td>Case Studies</td>
+					  </tr>
+					  <tr ng-if="selectedLanguage=='fr'">
+					    <td>Cours</td>
+					    <td>Activités</td>
+					    <td>Exploration</td>
+					    <td>Etudes de cas</td>
 					  </tr>
 					</table>
 				</p>
