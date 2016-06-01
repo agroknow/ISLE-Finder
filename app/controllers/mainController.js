@@ -164,7 +164,7 @@ listing.controller("mainController", function($rootScope, $scope, $http, $routeP
 	//@function `init_language()` : Initialize Language for UI
 	$scope.init_language = function() {
 		$rootScope.languages = {};
-		$scope.selectedLanguage = 'en';
+		$scope.selectedLanguage = 'fr';
 		$scope.lang_file = $scope.selectedLanguage+'.json';
 
 		/*-----------------------------------get languages for UI-----------------------------------*/
@@ -178,6 +178,23 @@ listing.controller("mainController", function($rootScope, $scope, $http, $routeP
 
 	};
 
+	//@function change_language() : function for changing lang
+	//- @param: lang code xx (must be the same with the language file in config/lang/xx.json)
+	$scope.change_language = function(lang) {
+		$scope.selectedLanguage = lang;
+
+		$http.get($scope.lang_path+lang+'.json')
+		.success(function(data) {
+			$rootScope.languages = data;
+			if( $location.$$url.indexOf('search') > -1 ) $scope.findElements(true);
+			if( $location.$$url.indexOf('item') > -1  ) $scope.getItem();
+		})
+		.error(function(err){
+			console.log(err);
+		});
+
+
+	}
 
 	//@function `submit(type)`: query submission
 	//- @param type : 'educational', 'publications', 'training'
@@ -220,25 +237,6 @@ listing.controller("mainController", function($rootScope, $scope, $http, $routeP
 		$location.search('q',null);
 		$scope.activeFacets = [];
 		$scope.findElements(true);
-	}
-
-
-	//@function change_language() : function for changing lang
-	//- @param: lang code xx (must be the same with the language file in config/lang/xx.json)
-	$scope.change_language = function(lang) {
-		$scope.selectedLanguage = lang;
-
-		$http.get($scope.lang_path+lang+'.json')
-		.success(function(data) {
-			$rootScope.languages = data;
-			if( $location.$$url.indexOf('search') > -1 ) $scope.findElements(true);
-			if( $location.$$url.indexOf('item') > -1  ) $scope.getItem();
-		})
-		.error(function(err){
-			console.log(err);
-		});
-
-
 	}
 
 	//@function sanitize() : function for line break removal
