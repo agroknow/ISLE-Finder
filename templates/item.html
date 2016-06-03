@@ -4,45 +4,106 @@
 
 
 <form ng-submit="submit('educational')" class="form-wrapper cf" >
-    <input ng-model="search_query" name="search_query" type="text" placeholder="{{languages.search_here}}..." >
+    <input ng-model="search_query" name="search_query" type="text" placeholder="{{languages.search_here}}..." />
     <button type="submit"><li class="glyphicon glyphicon-search"></li>&nbsp;&nbsp;&nbsp;{{languages.search}}</button>
 </form>
+
 <div class="row">
-	<div id="main_content" class="col-md-8">
+	<div id="main_content" class="col-md-8" style="width:65% !important;">
         <a href="{{item_resource_url}}" target=_blank ><h3 id="itemTitle">{{item_title}}</h3></a>
-        <ul>
+        <ul><br>
 			 <li><span class="labels">{{languages.description || 'Description' }} : </span> <br>
 			 	{{item_description}}
-			 	</li>
-			 <li><span class="labels">{{languages.keywords || 'Keywords' }} : </span>
+			 	</li><br>
+			 <li><span class="labels">{{languages.keywords || 'Keywords' }}: </span>
 			 	<a ng-repeat="keys in item_keywords" href="#/educational/search/?q={{keys}}" >{{keys}}<span ng-show="$index != item_keywords.length-1">, </span> </a>
 			 </li>
-			 <li ng-show="item_organization!=undefined" ><span class="labels">{{languages.organization || 'Organization' }}: </span> {{item_organization}} </li>
-			 <li ng-show="item_language!=undefined" ><span class="labels">{{languages.language || 'Language' }}: </span> {{item_language}} </li>
-			 <li ng-show="item_coverage!=undefined" ><span class="labels">{{languages.location || 'Location' }}: </span> {{item_coverage}}</li>
-			 <li ng-show="item_resource_types.length > 0" ><span class="labels">{{languages.learningResourceTypes || 'Resource Type' }}: </span> <span ng-repeat="types in item_resource_types">{{types}}<span ng-show="$index != item_resource_types.length-1">, </span> </span></li>
-
-			 <li ng-show="item_roles.length > 0" ><span class="labels">{{languages.key_audience || 'Key Audience' }}: </span> <span ng-repeat="roles in item_roles"> {{roles}}<span ng-show="$index != item_roles.length-1">, </span> </span></li>
-			 <li ng-show="item_context.length > 0" ><span class="labels">{{languages.context || 'Context' }}: </span> <span ng-repeat="context in item_context"> {{context}}<span ng-show="$index != item_context.length-1">, </span> </span></li>
-			 <li ng-show="item_rights!=undefined" ><span class="labels">{{languages.copyrights || 'Rights' }}: </span> <a href="{{item_rights}}" target=_blank > {{item_rights}}</a></li>
-		 </ul>
-
+		</ul>
+		
+		<a class="btn2 btn btn-sm btn-default" href="javascript:history.back();" ><li class="glyphicon glyphicon-arrow-left"></li>&nbsp;&nbsp;&nbsp;{{languages.back_to_search}}</a>
+		<a href="{{item_resource_url}}" class="btn2 btn btn-sm btn-default" target=_blank ><li class="glyphicon glyphicon-eye-open"></li>&nbsp;&nbsp;&nbsp;{{languages.access_the_resource || 'Access the resource' }}</a><br><br>
 	</div>
-		<div class="col-md-4">
-			<a class="btn2 btn btn-sm btn-default" href="javascript:history.back();" ><li class="glyphicon glyphicon-arrow-left"></li>&nbsp;&nbsp;&nbsp;{{languages.back_to_search}}</a>
-			<a href="{{item_resource_url}}" class="btn2 btn btn-sm btn-default" target=_blank ><li class="glyphicon glyphicon-eye-open"></li>&nbsp;&nbsp;&nbsp;{{languages.access_the_resource || 'Access the resource' }}</a>
 
-			<ul class="socialbuttons">
-	        <li>
-	            <a facebook-feed-share class="facebookShare facebook-big" data-name="{{item_title}}" data-url="{{curr_url}}" data-shares='shares' data-description="{{item_abstract}}" data-picture="">{{ shares }}</a>
-	        </li>
-	        <li>
-	            <a class="twitter-big" onclick="tweetPopup(this);" href="javascript:void(0);" data-text="{{item_title + '-' + item_abstract | cut:true:130-curr_url.length:'...'}}" data-url="{{curr_url}}" data-via="">Tweet <span id="twitterCount"></span></a>
-	        </li>
-    	</ul>
-		</div>
+	<div class="col-md-4" style="width:35% !important;background:transparent linear-gradient(rgb(212, 212, 181), rgb(112, 209, 181)) repeat scroll 0% 0%;border-radius:4px;padding-bottom:15px;">
+		<table class="socialbuttonstable">
+			<tr>
+				<td>
+					<a twitter  onclick="tweetPopup(this);" data-lang="en" data-count='horizontal' data-url="{{curr_url}}" data-via='WenXiaoHD' data-size="medium" data-text="{{item_title}}"></a>
+				</td>
+				<td style="padding-top:2px;">
+					<a facebook-feed-share class="facebookShare" data-url="{{curr_url}}" data-shares='shares', data-description="{{item_abstract}}">{{ shares }}</a>
+				</td>
+			</tr>
+		</table>   
+    		
 
+    	<table class="listingdetailstable">
+		<tr>
+			<td>
+				<span class="labels">{{languages.organization || 'Organization' }}:</span>
+			</td>
+			<td>
+				{{item_organization}}
+			</td>
+		</tr>
 
-</div>
+		<tr ng-show="item_language!=undefined">
+			<td>
+				<span><span class="labels">{{languages.language || 'Language' }}:</span></span>
+			</td>
+			<td>
+				{{item_language}}
+			</td>
+		</tr>
+
+		<tr ng-show="item_coverage!=undefined">
+			<td>
+				<span class="labels">{{languages.location || 'Location' }}:</span>
+			</td>
+			<td>
+				 {{item_coverage}} 
+			</td>
+		</tr>
+
+		<tr ng-show="item_resource_types.length > 0">
+			<td>
+				<span>
+					<span class="labels">{{languages.learningResourceTypes || 'Resource Type' }}:
+					</span>
+				</span>
+			</td>
+			<td>
+				<span ng-repeat="types in item_resource_types track by $index">{{types}} </span>
+			</td>
+		</tr>
+
+		<tr>
+			<td ng-show="item_roles.length > 0">
+				<span class="labels">{{languages.key_audience || 'Key Audience' }}:</span>
+			</td>
+			<td>
+				<span ng-repeat="roles in item_roles">{{roles}} </span>
+			</td>
+		</tr>
+
+		<tr ng-show="item_context.length > 0">
+			<td>
+				<span class="labels">{{languages.context || 'Context' }}:</span>
+			</td>
+			<td>
+				<span ng-repeat="context in item_context">{{context}} </span>
+			</td>
+		</tr>
+
+		<tr ng-show="item_rights!=undefined">
+			<td>
+				<span class="labels">{{languages.copyrights || 'Rights' }}:</span>
+			</td>
+			<td>
+				<a href="{{item_rights}}" target=_blank >{{item_rights}} </a>
+			</td>
+		</tr>
+		</table>
+	</div>	
 </div>
 </div>

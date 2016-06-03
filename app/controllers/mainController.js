@@ -164,7 +164,7 @@ listing.controller("mainController", function($rootScope, $scope, $http, $routeP
 	//@function `init_language()` : Initialize Language for UI
 	$scope.init_language = function() {
 		$rootScope.languages = {};
-		$scope.selectedLanguage = 'fr';
+		$scope.selectedLanguage = 'en';
 		$scope.lang_file = $scope.selectedLanguage+'.json';
 
 		/*-----------------------------------get languages for UI-----------------------------------*/
