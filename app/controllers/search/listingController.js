@@ -259,9 +259,9 @@
 						var keywords='';
 						for( i in thisJson.languageBlocks[$scope.selectedLanguage][snippet_elements[index]] ) {
 							if( i != 0 ) {
-								keywords += ",\""+thisJson.languageBlocks[$scope.selectedLanguage][snippet_elements[index]][i]+"\"";
+								keywords += ",\""+thisJson.languageBlocks[$scope.selectedLanguage][snippet_elements[index]][i].replace(/"/g,"'")+"\"";
 							} else {
-								keywords += "\""+thisJson.languageBlocks[$scope.selectedLanguage][snippet_elements[index]][i]+"\"";
+								keywords += "\""+thisJson.languageBlocks[$scope.selectedLanguage][snippet_elements[index]][i].replace(/"/g,"'")+"\"";
 							}
 						}
 						equals += "\"" + snippet_elements[index] + "\" : [" + keywords + "]";
