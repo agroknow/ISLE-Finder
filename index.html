@@ -31,17 +31,21 @@
 
 </head>
 
-<body ng-app="akListing" ng-cloak>
-		<div id="wrap" ng-controller="mainController" ng-init="init_language()" >
-			<header >
-				<!-- Language     -->
-				 <div class="languages_block" style="float:left;padding-left:25px;">
-					 <a href="javascript:;" ng-click="change_language('en')"><img src="assets/images/flag_en_round.png" ></a>
-					 <a href="javascript:;" ng-click="change_language('fr')"><img src="assets/images/flag_fr_round.png" ></a>
-					 <a href="javascript:;" ng-click="change_language('el')"><img src="assets/images/flag_gr_round.png" ></a>
-				 </div>
-				<!-- / Language -->
-			</header>
+<body ng-app="akListing" ng-cloak ng-controller="mainController" ng-init="init_language()">
+
+	<div id="super_menu" class="super_menu">
+	<div id="language_selector" class="language_selector">
+		<a href="javascript:;" ng-click="change_language('en')"><img src="assets/images/flag_en_round.png" ></a>
+		<a href="javascript:;" ng-click="change_language('fr')"><img src="assets/images/flag_fr_round.png" ></a>
+		<a href="javascript:;" ng-click="change_language('el')"><img src="assets/images/flag_gr_round.png" ></a>
+		<a href="javascript:;" ng-click="change_language('de')"><img src="assets/images/flag_de_round.jpg" ></a>
+		<a href="javascript:;" ng-click="change_language('sp')"><img src="assets/images/flag_sp_round.png" ></a>
+		<a href="javascript:;" ng-click="change_language('it')"><img src="assets/images/flag_it_round.png" ></a>
+		<a href="javascript:;" ng-click="change_language('pt')"><img src="assets/images/flag_pt_round.png" ></a>
+	</div>
+	</div>
+		<div id="wrap" ng-controller="mainController">
+			<header ></header>
 
 			<div id="akListing">
 				<ul>
@@ -49,19 +53,31 @@
 	                <div ng-if="selectedLanguage=='en'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Return Home</a>
 	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own portal</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>	                
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>                
 	                </div>
 
 	                <div ng-if="selectedLanguage=='fr'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Home Retour</a>
 	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Demandez votre portail personnel</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='el'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Αρχική</a>
-	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Αποκττήστε το δικό σας portal</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Αποκτήστε το δικό σας portal</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
+	                </div>
+
+	                <div ng-if="selectedLanguage=='de'">
+	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Startseite</a>
+	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Fordern Sie Ihr eigenes Portal an</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Verband I.S.L.E</a>
+	                </div>
+
+	                <div ng-if="selectedLanguage=='sp'">
+	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Inicio</a>
+	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Pedir su propio portal</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
 	                </div>
 	                </div>
  				</ul>
@@ -96,18 +112,42 @@
 					    <td>Εξερευνήσεις</td>
 					    <td>Μελέτες Περιπτώσεων</td>
 					  </tr>
+					  <tr ng-if="selectedLanguage=='de'">
+					    <td>Kurse</td>
+					    <td>Aktivitäten</td>
+					    <td>Erkundung</td>
+					    <td>Fallstudien</td>
+					  </tr>
+					  <tr ng-if="selectedLanguage=='sp'">
+					    <td>Cursos</td>
+					    <td>Actividades</td>
+					    <td>Exploración</td>
+					    <td>Caso de estudio</td>
+					  </tr>
 					</table>
 				</p>
 			</div>
 		</div>
 
-		<!--<footer  class="col-xs-12 col-sm-12 col-md-12">
-			sometext
-		</footer>-->
+		<footer  class="col-xs-12 col-sm-12 col-md-12 text-center">
+			<div class="row">
+				<div class="col-sm-8">
+					<div id="partners-list" class="partners-list">
+						
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div id="twitter-feed" class="twitter-feed">
+						
+					</div>
+				</div>
+			</div>
+		</footer>
+
 		</div>
 		<div id="address_footer"><p class="aligncenter">&nbsp;</p></div>
 
-	<!-- ----------- -->
+
 	<!-- angular -->
 	<script type="text/javascript" src="lib/angular.min.js"></script>
 	<script type="text/javascript" src="lib/angular-route.min.js"></script>
