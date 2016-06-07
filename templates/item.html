@@ -10,7 +10,7 @@
 
 <div class="row">
 	<div id="main_content" class="col-md-8" style="width:65% !important;">
-        <a href="{{item_resource_url}}" target=_blank ><h3 id="itemTitle">{{item_title}}</h3></a>
+        <div id="itemTitle" style="font-size:20px;text-align:left;color:#000;font-weight:600;">{{item_title}}</div>
         <ul><br>
 			 <li><span class="labels">{{languages.description || 'Description' }} : </span> <br>
 			 	{{item_description}}
@@ -28,7 +28,7 @@
 		<table class="socialbuttonstable">
 			<tr>
 				<td>
-					<a twitter  onclick="tweetPopup(this);" data-lang="en" data-count='horizontal' data-url="{{curr_url}}" data-via='WenXiaoHD' data-size="medium" data-text="{{item_title}}"></a>
+					<a twitter  onclick="tweetPopup(this);" data-lang="en" data-count='horizontal' data-url="{{curr_url}}" data-via='#GLN' data-size="medium" data-text="{{item_title}}"></a>
 				</td>
 				<td style="padding-top:2px;">
 					<a facebook-feed-share class="facebookShare" data-url="{{curr_url}}" data-shares='shares', data-description="{{item_abstract}}">{{ shares }}</a>

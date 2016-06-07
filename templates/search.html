@@ -86,8 +86,8 @@
 
 					<!-- results -->
 					<li class="snippet" ng-repeat="result in filtered = (results | filter:filterResults) ">
-						<span class="title"><a href="#/item/{{result.id}}_{{result.set}}">{{result.title}}</a></span><a href="#/item/{{result.id}}_{{result.set}}" class="viewmore"> [{{languages.view_more}}] </a>
-						<br> {{result.description}}
+						<span class="title"><a href="#/item/{{result.id}}_{{result.set}}">{{result.title}}</a></span>
+						<br> {{result.description}}<a href="#/item/{{result.id}}_{{result.set}}" class="viewmore"> [{{languages.view_more}}..] </a>
 						<br> <b><span class="hidden-xs">{{languages.keywords || 'Keywords'}}: </span></b>
 							 <a ng-repeat="keys in result.keywords" href="#/educational/search/?q={{keys}}" >{{keys}}<span ng-show="$index != result.keywords.length-1">, </span></a>
 						<br ng-show="result.rights != undefined">
