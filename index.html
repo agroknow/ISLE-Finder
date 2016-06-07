@@ -17,6 +17,7 @@
 		<script>
 	      document.write('<base href="' + document.location + '" />');
 		</script>
+		<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -52,32 +53,32 @@
 	                <div id="navmenu" class="col-xs-12 col-sm-12 col-md-12 text-center">
 	                <div ng-if="selectedLanguage=='en'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Return Home</a>
-	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own portal</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>                
+	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own microsite</a>
+	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>                
 	                </div>
 
 	                <div ng-if="selectedLanguage=='fr'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Home Retour</a>
-	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Demandez votre portail personnel</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Demandez votre microsite personnel</a>
+	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='el'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Αρχική</a>
-	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Αποκτήστε το δικό σας portal</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Αποκτήστε το δικό σας microsite</a>
+	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='de'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Startseite</a>
-	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Fordern Sie Ihr eigenes Portal an</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Verband I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Fordern Sie Ihr eigenes microsite an</a>
+	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Verband I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='sp'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Inicio</a>
-	                    <a class="btn btn-default" href="http://spg.latramis.com/welcome"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Pedir su propio portal</a>
-	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Pedir su propio microsite</a>
+	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
 	                </div>
 	                </div>
  				</ul>
@@ -170,6 +171,9 @@
 	<!-- JIRA BUGS REPORTING -->
     <!-- <script type="text/javascript" src="https://agroknow.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e/en_US-95vtla/6322/8/1.4.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=7bdc0edb"></script> -->
 
+
+<a href="#0" class="cd-top">Top</a>
+<script src="js/main.js"></script> <!-- Gem jQuery -->
 
 <script type="text/javascript">
 // Tiny object for getting counts
