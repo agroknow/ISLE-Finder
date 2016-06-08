@@ -1,4 +1,22 @@
 <!-- VIEW ITEM -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1642431332672329',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <br>
 <div id="view_item" ng-controller="viewItemController" ng-init="getItem()">
 
@@ -31,7 +49,7 @@
 					<a twitter  onclick="tweetPopup(this);" data-lang="en" data-count='horizontal' data-url="{{curr_url}}" data-via='#GLN' data-size="medium" data-text="{{item_title}}"></a>
 				</td>
 				<td style="padding-top:2px;">
-					<a facebook-feed-share class="facebookShare" data-url="{{curr_url}}" data-shares='shares', data-description="{{item_abstract}}">{{ shares }}</a>
+					<a facebook-feed-share class="facebookShare" data-url="{{curr_url}}" data-shares='shares', data-name="{{item_title}}" data-description="{{item_description}}">{{ shares }}</a>
 				</td>
 			</tr>
 		</table>   
