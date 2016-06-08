@@ -112,7 +112,7 @@
 		//- query_pagination : '&page_size=15&page=1'
 		//- limitFacets : '&set=oeintute&language=en,fr'
 		//- limitFacetsNumber : '&limitFacetsNumber'
-		var filterSearch = '&set=oeorganiceprints,aglrfaocdx,prodinraagro,oeintute,sercmicro,oeagroasis,greenideas';
+		var filterSearch = '&set=oeorganiceprints,aglrfaocdx,prodinraagro,oeintute,sercmicro,oeagroasis';
 		var query = $scope.api_path + $scope.schema + '?' + $rootScope.query.toLowerCase() + query_facets + query_active_facets + query_pagination + limitFacets + limitFacetsNumber + filterSearch;
 
 
