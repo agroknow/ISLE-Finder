@@ -67,7 +67,7 @@
 
 		<tr ng-show="item_language!=undefined">
 			<td>
-				<span><span class="labels">{{languages.language || 'Language' }}:</span></span>
+				<span class="labels">{{languages.language || 'Language' }}:</span>
 			</td>
 			<td>
 				{{item_language}}
@@ -85,10 +85,7 @@
 
 		<tr ng-show="item_resource_types.length > 0">
 			<td>
-				<span>
-					<span class="labels">{{languages.learningResourceTypes || 'Resource Type' }}:
-					</span>
-				</span>
+				<span class="labels">{{languages.learningResourceTypes || 'Resource Type' }}:</span>
 			</td>
 			<td>
 				<span ng-repeat="types in item_resource_types track by $index">{{types}} </span>
