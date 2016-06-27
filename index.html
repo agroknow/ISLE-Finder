@@ -35,7 +35,21 @@
 
 	<div id="super_menu" class="super_menu shadow-bot-edged">
 	<div id="request_microsite" style="float:left;margin-top:-9px;">
-		<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own microsite</a>
+		<div ng-if="selectedLanguage=='en'">
+			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Request your own microsite</a>
+		</div>
+		<div ng-if="selectedLanguage=='fr'">
+			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Demandez votre microsite personnel</a>
+		</div>
+		<div ng-if="selectedLanguage=='el'">
+			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Αποκτήστε το δικό σας microsite</a>
+		</div>
+		<div ng-if="selectedLanguage=='de'">
+			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Fordern Sie Ihr eigenes microsite an</a>
+		</div>
+		<div ng-if="selectedLanguage=='sp'">
+			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Pedir su propio microsite</a>
+		</div>
 	</div>
 	<div id="language_selector" class="language_selector">
 		<a href="javascript:;" ng-click="change_language('en')"><img src="assets/images/flag_en_round.png"></a>
@@ -61,25 +75,21 @@
 
 	                <div ng-if="selectedLanguage=='fr'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Home Retour</a>
-	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Demandez votre microsite personnel</a>
 	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='el'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Αρχική</a>
-	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Αποκτήστε το δικό σας microsite</a>
 	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='de'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Startseite</a>
-	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Fordern Sie Ihr eigenes microsite an</a>
 	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Verband I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='sp'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Inicio</a>
-	                    <a class="btn btn-default" href="http://dev.akstem.com/gln/request_microsite"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Pedir su propio microsite</a>
 	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
 	                </div>
 	                </div>
