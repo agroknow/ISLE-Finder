@@ -50,6 +50,9 @@
 		<div ng-if="selectedLanguage=='sp'">
 			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Pedir su propio microsite</a>
 		</div>
+		<div ng-if="selectedLanguage=='pt'">
+			<a class="btn" href="http://dev.akstem.com/gln/request_microsite" style="color:white !important"><li class="glyphicon glyphicon-share-alt"></li>&nbsp;&nbsp;&nbsp;Socilite o seu próprio portal</a>
+		</div>
 	</div>
 	<div id="language_selector" class="language_selector">
 		<a href="javascript:;" ng-click="change_language('en')"><img src="assets/images/flag_en_round.png"></a>
@@ -57,8 +60,8 @@
 		<a href="javascript:;" ng-click="change_language('el')"><img src="assets/images/flag_gr_round.png"></a>
 		<a href="javascript:;" ng-click="change_language('de')"><img src="assets/images/flag_de_round.jpg"></a>
 		<a href="javascript:;" ng-click="change_language('sp')"><img src="assets/images/flag_sp_round.png"></a>
-		<!--<a href="javascript:;" ng-click="change_language('it')"><img src="assets/images/flag_it_round.png"></a>
-		<a href="javascript:;" ng-click="change_language('pt')"><img src="assets/images/flag_pt_round.png"></a>-->
+		<!--<a href="javascript:;" ng-click="change_language('it')"><img src="assets/images/flag_it_round.png"></a>-->
+		<a href="javascript:;" ng-click="change_language('pt')"><img src="assets/images/flag_pt_round.png"></a>
 	</div>
 	</div>
 		<div id="wrap" ng-controller="mainController">
@@ -91,6 +94,11 @@
 	                <div ng-if="selectedLanguage=='sp'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Inicio</a>
 	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
+	                </div>
+
+	                <div ng-if="selectedLanguage=='pt'">
+	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Página base</a>
+	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Associação I.S.L.E</a>
 	                </div>
 	                </div>
  				</ul>
@@ -136,6 +144,12 @@
 					    <td>Actividades</td>
 					    <td>Exploración</td>
 					    <td>Caso de estudio</td>
+					  </tr>
+					  <tr ng-if="selectedLanguage=='pt'">
+					    <td>Cursos</td>
+					    <td>Atividades</td>
+					    <td>Exploração</td>
+					    <td>Estudos de casos</td>
 					  </tr>
 					</table>
 				</p>
