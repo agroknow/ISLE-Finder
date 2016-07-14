@@ -60,7 +60,7 @@
 		<a href="javascript:;" ng-click="change_language('el')"><img src="assets/images/flag_gr_round.png"></a>
 		<a href="javascript:;" ng-click="change_language('de')"><img src="assets/images/flag_de_round.jpg"></a>
 		<a href="javascript:;" ng-click="change_language('sp')"><img src="assets/images/flag_sp_round.png"></a>
-		<!--<a href="javascript:;" ng-click="change_language('it')"><img src="assets/images/flag_it_round.png"></a>-->
+		<a href="javascript:;" ng-click="change_language('it')"><img src="assets/images/flag_it_round.png"></a>
 		<a href="javascript:;" ng-click="change_language('pt')"><img src="assets/images/flag_pt_round.png"></a>
 	</div>
 	</div>
@@ -73,32 +73,37 @@
 	                <div ng-if="selectedLanguage=='en'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Home</a>
 	                    
-	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>                
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>                
 	                </div>
 
 	                <div ng-if="selectedLanguage=='fr'">
-	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Home Retour</a>
-	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Retour</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Association I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='el'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Αρχική</a>
-	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Συνεταιρισμός I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='de'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Startseite</a>
-	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Verband I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Verband I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='sp'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Inicio</a>
-	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Asociación I.S.L.E</a>
+	                </div>
+
+	                <div ng-if="selectedLanguage=='it'">
+	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;ITA</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Associazione I.S.L.E</a>
 	                </div>
 
 	                <div ng-if="selectedLanguage=='pt'">
 	                    <a class="btn btn-default" href="http://www.greenlearningnetwork.com/isle/#/"><li class="glyphicon glyphicon-home"></li>&nbsp;&nbsp;&nbsp;Página base</a>
-	                    <a class="btn btn-default" href="#"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Associação I.S.L.E</a>
+	                    <a class="btn btn-default" href="http://isleassociation.wix.com/sdnetwork" target="_blank"><li class="glyphicon glyphicon-new-window"></li>&nbsp;&nbsp;&nbsp;Associação I.S.L.E</a>
 	                </div>
 	                </div>
  				</ul>
@@ -144,6 +149,12 @@
 					    <td>Actividades</td>
 					    <td>Exploración</td>
 					    <td>Caso de estudio</td>
+					  </tr>
+					  <tr ng-if="selectedLanguage=='it'">
+					    <td>corsi</td>
+					    <td>attività</td>
+					    <td>Esplorazione</td>
+					    <td>Casi studio</td>
 					  </tr>
 					  <tr ng-if="selectedLanguage=='pt'">
 					    <td>Cursos</td>
