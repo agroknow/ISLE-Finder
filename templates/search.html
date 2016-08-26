@@ -85,6 +85,7 @@
 					</alert>
 
 					<!-- results -->
+					<div class="results_styler">
 					<li class="snippet" ng-repeat="result in filtered = (results | filter:filterResults) ">
 						<span class="title"><a href="#/item/{{result.id}}_{{result.set}}">{{result.title}}</a></span>
 						<br> {{result.description}}<a href="#/item/{{result.id}}_{{result.set}}" class="viewmore"> [{{languages.view_more}}..] </a>
@@ -95,6 +96,7 @@
 						 	<a ng-show="result.rights != undefined" href="{{result.rights}}" target=_blank > {{result.rights}} </a>
 						<br>
 					</li>
+					</div>
 
 				</ul>
 		</div>
